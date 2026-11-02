@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es" data-tema="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Entrega para Ana</title>
+<style>
+  :root{
+    --bg:#faf7f2; --surface:#fff; --panel:#f3efe8; --ink:#241f1a; --soft:#574f45; --faint:#7a7065;
+    --line:rgba(60,40,20,.13); --line-soft:rgba(60,40,20,.07);
+    --accent:#c0562a; --accent-soft:rgba(192,86,42,.10);
+    --auto:#1f7a6b; --auto-soft:rgba(31,122,107,.12); --comm:#6a4a9c;
+    --fs:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+    --serif:"Iowan Old Style","Palatino",Georgia,"Times New Roman",serif;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-tema="light"]){
+    --bg:#121110; --surface:#1d1a16; --panel:#242019; --ink:#f3ede4; --soft:#cbc1b4; --faint:#9c9284;
+    --line:rgba(255,255,255,.13); --line-soft:rgba(255,255,255,.06);
+    --accent:#e8824f; --accent-soft:rgba(232,130,79,.15); --auto:#3fb89f; --auto-soft:rgba(63,184,159,.16); --comm:#b79ae6;
+    color-scheme:dark;
+  }}
+  :root[data-tema="dark"]{
+    --bg:#121110; --surface:#1d1a16; --panel:#242019; --ink:#f3ede4; --soft:#cbc1b4; --faint:#9c9284;
+    --line:rgba(255,255,255,.13); --line-soft:rgba(255,255,255,.06);
+    --accent:#e8824f; --accent-soft:rgba(232,130,79,.15); --auto:#3fb89f; --auto-soft:rgba(63,184,159,.16); --comm:#b79ae6;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font:18px/1.6 var(--fs);-webkit-font-smoothing:antialiased;
+    padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .wrap{max-width:720px;margin:0 auto;padding:36px 4px 90px}
+  .glifo{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .tgl{position:fixed;top:14px;right:14px;z-index:9;background:var(--surface);border:1px solid var(--line);color:var(--soft);width:42px;height:42px;border-radius:12px;cursor:pointer;display:grid;place-items:center}
+  .tgl:focus-visible{outline:3px solid var(--auto);outline-offset:2px} .tgl .glifo{width:20px;height:20px}
+  .hero{padding:40px 0 26px;border-bottom:1px solid var(--line)}
+  .kick{font:700 12px var(--fs);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+  h1{font:600 clamp(34px,8vw,54px)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}
+  .sub{font:300 clamp(18px,3vw,22px)/1.5 var(--fs);color:var(--soft);max-width:56ch;margin:0 0 14px}
+  .note{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 17px;font-size:15px;color:var(--soft);margin:18px 0 0}
+  .note b{color:var(--ink)}
+  .list{padding:30px 0 10px}
+  .card{display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px;transition:border-color .15s,transform .08s}
+  .card:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .card:focus-visible{outline:3px solid var(--auto);outline-offset:3px}
+  .num{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:600 18px var(--serif)}
+  .card.start .num{background:var(--auto-soft);color:var(--auto)}
+  .tx{flex:1;min-width:0}
+  .tt{display:block;font:600 19px var(--serif);margin-bottom:3px}
+  .ds{display:block;font-size:14.5px;color:var(--faint);line-height:1.45}
+  .badge{display:inline-block;font:700 10px var(--fs);letter-spacing:.06em;text-transform:uppercase;color:var(--auto);background:var(--auto-soft);border-radius:999px;padding:3px 9px;margin-left:8px;vertical-align:1px}
+  .ar{flex:none;color:var(--faint);font-size:22px}
+  .foot{text-align:center;color:var(--faint);font-size:14px;margin-top:30px;line-height:1.6}
+</style>
+</head>
+<body>
+<button class="tgl" id="tgl" aria-label="Cambiar entre modo claro y oscuro"><svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg></button>
+<div class="wrap">
+  <header class="hero">
+    <p class="kick">Para Ana García-Valcárcel</p>
+    <h1>SAC · EMMA — entrega para tu valoración.</h1>
+    <p class="sub">Querida Ana: aquí tienes, en un solo sitio, todo lo necesario para valorar la aplicación — verla funcionar, entender su método, situarla en el marco DUA y anotar tu juicio. Pensado para unos 20 minutos.</p>
+    <div class="note"><b>Tu papel:</b> una valoración experta <b>puntual</b> de la aplicación como producto de tecnología educativa — no supervisión ni codirección. La validez causal corresponde al experimento preregistrado; aquí no se te pide eso.</div>
+  </header>
+
+  <nav class="list">
+    <a class="card start" href="portada.html">
+      <span class="num">1</span><span class="tx"><span class="tt">La aplicación <span class="badge">empieza aquí</span></span><span class="ds">El demo interactivo. Dentro, el botón "Recorrido para Ana" te guía por las 3 capas, los 4 roles y el mapa "Qué evaluar".</span></span><span class="ar">→</span></a>
+
+    <a class="card" href="SAC_explicado_metodo_estilo_Apple.html">
+      <span class="num">2</span><span class="tx"><span class="tt">El SAC, explicado</span><span class="ds">El método: inteligencia extendida, comprensión demostrable, juicio ciego e hipótesis de barrera, y evaluación por procesos (no instrumentos).</span></span><span class="ar">→</span></a>
+
+    <a class="card" href="EMMA_x_DUA_crosswalk_estilo_Apple.html">
+      <span class="num">3</span><span class="tx"><span class="tt">EMMA × DUA — el crosswalk</span><span class="ds">Los 3 principios y 9 pautas del CAST, columna a columna: cómo EMMA los lleva a la práctica y los democratiza.</span></span><span class="ar">→</span></a>
+
+    <a class="card" href="IMPLEMENTACIONES_EMMA_estilo_Apple.html">
+      <span class="num">4</span><span class="tx"><span class="tt">Implementaciones y ayudas</span><span class="ds">Todo por rol —estudiante, docente, docente investigador, institución—, las competencias digitales, los marcos y cómo evalúa.</span></span><span class="ar">→</span></a>
+
+    <a class="card" href="GUIA_evaluacion_Ana_estilo_Apple.html">
+      <span class="num">5</span><span class="tx"><span class="tt">Guía de evaluación <span class="badge">para anotar</span></span><span class="ds">La rúbrica: 8 áreas (desde tu cargo DUA + el acabado de calidad), con casillas y comentarios. Exportable a PDF.</span></span><span class="ar">→</span></a>
+  </nav>
+
+  <p class="foot">EMMA · SAC · xI — Diego Elvira Vásquez · UPSA, Cátedra de Inteligencia Extendida · Hack4Edu 2026 (SENIOR)<br>Gracias por tu tiempo y tu criterio.</p>
+</div>
+<script>
+  (function(){
+    var t=document.getElementById('tgl');
+    function cur(){ return document.documentElement.getAttribute('data-tema')==='dark'||(document.documentElement.getAttribute('data-tema')!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'; }
+    t.addEventListener('click',function(){ document.documentElement.setAttribute('data-tema', cur()==='dark'?'light':'dark'); });
+  })();
+</script>
+</body>
+</html>
